@@ -1,0 +1,21 @@
+{
+  "name": "cliget-chrome",
+  "version": "1.0.0",
+  "description": "Download files from the command line using aria2",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "chrome-extension",
+    "download",
+    "aria2",
+    "command-line"
+  ],
+  "author": "Retengart",
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Retengart/cliget-chrome.git"
+  }
+} 
