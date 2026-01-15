@@ -2,9 +2,12 @@
   "name": "cliget-chrome",
   "version": "1.0.0",
   "description": "Download files from the command line using aria2",
-  "main": "background.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "bun run build.ts",
+    "dev": "bun run --watch build.ts",
+    "lint": "oxlint src/",
+    "lint:fix": "oxlint --fix src/"
   },
   "keywords": [
     "chrome-extension",
@@ -17,5 +20,11 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Retengart/cliget-chrome.git"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.9",
+    "@types/chrome": "^0.0.287",
+    "oxlint": "^0.16.6",
+    "typescript": "^5.7.3"
   }
-} 
+}

@@ -3,7 +3,7 @@
   "name": "cliget-chrome",
   "version": "1.0.0",
   "description": "Download files from the command line using aria2.",
-  
+
   "icons": {
     "48": "icons/cliget.png",
     "128": "icons/cliget.png"
@@ -13,16 +13,16 @@
     "webRequest",
     "storage"
   ],
-  
+
   "host_permissions": [
     "<all_urls>"
   ],
-  
+
   "background": {
-    "service_worker": "background.js",
+    "service_worker": "dist/background.js",
     "type": "module"
   },
-  
+
   "action": {
     "default_title": "cliget-chrome",
     "default_popup": "popup.html",
@@ -32,4 +32,4 @@
       "128": "icons/cliget.png"
     }
   }
-} 
+}

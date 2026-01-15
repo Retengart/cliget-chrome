@@ -1,0 +1,284 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 450px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  font-size: 13px;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+/* Tab bar */
+.tab-bar {
+  display: flex;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f5f5f5;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  color: #666;
+  transition: all 0.15s;
+}
+
+.tab-btn:hover {
+  background: #eaeaea;
+  color: #333;
+}
+
+.tab-btn.active {
+  background: #fff;
+  color: #4a90d9;
+  font-weight: 500;
+  border-bottom: 2px solid #4a90d9;
+  margin-bottom: -1px;
+}
+
+/* Content area */
+.content {
+  min-height: 200px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+/* Empty state */
+.empty-state {
+  padding: 40px 20px;
+  text-align: center;
+  color: #888;
+}
+
+/* Download list */
+.download-list {
+  padding: 4px 0;
+}
+
+.download-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  transition: background 0.1s;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.download-item:hover {
+  background: #f8f8f8;
+}
+
+.download-item:last-child {
+  border-bottom: none;
+}
+
+.filename {
+  font-weight: 500;
+}
+
+.file-size {
+  color: #888;
+  font-weight: normal;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 8px;
+  border-top: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.page-btn {
+  padding: 4px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 12px;
+  border-top: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.clear-btn {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  color: #666;
+}
+
+.clear-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Command view */
+.command-textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+  font-size: 11px;
+  resize: none;
+  background: #f9f9f9;
+}
+
+.command-actions {
+  display: flex;
+  gap: 8px;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.copy-btn,
+.back-btn {
+  padding: 6px 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.copy-btn {
+  background: #4a90d9;
+  border-color: #4a90d9;
+  color: #fff;
+}
+
+.copy-btn:hover {
+  background: #3a7bc8;
+}
+
+.copy-btn.copied {
+  background: #28a745;
+  border-color: #28a745;
+}
+
+.back-btn:hover {
+  background: #f0f0f0;
+}
+
+/* Inline options */
+.inline-options {
+  padding: 10px 12px;
+  background: #fafafa;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #666;
+  cursor: pointer;
+}
+
+.checkbox-label input {
+  cursor: pointer;
+}
+
+/* Options tab */
+.options-form {
+  padding: 12px;
+}
+
+.option-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.option-row label {
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.option-row.text-row {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.option-row.text-row label {
+  margin-bottom: 4px;
+}
+
+.option-row input[type='text'] {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.option-row input[type='text']:focus {
+  outline: none;
+  border-color: #4a90d9;
+}
+
+.options-footer {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 12px;
+  border-top: 1px solid #e0e0e0;
+  background: #fafafa;
+}
+
+.reset-btn {
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  color: #666;
+}
+
+.reset-btn:hover {
+  background: #f0f0f0;
+  color: #333;
+}
+
+/* Error state */
+.error {
+  padding: 20px;
+  text-align: center;
+  color: #dc3545;
+}
