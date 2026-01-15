@@ -1,4 +1,7 @@
 node_modules/
 dist/
+release/
 bun.lockb
 *.log
+*.crx
+*.pem
