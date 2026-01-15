@@ -2,11 +2,24 @@ import type { Options } from '../shared/types';
 import { sendMessage } from '../shared/messages';
 import { clearElement, el } from './components';
 
+// Show error message
+function showError(container: HTMLElement, message: string): void {
+  clearElement(container);
+  container.appendChild(el('div', { class: 'error' }, [message]));
+}
+
 // Render options tab
 export async function renderOptionsTab(container: HTMLElement): Promise<void> {
   clearElement(container);
 
-  const options = await sendMessage({ type: 'getOptions' });
+  let options;
+  try {
+    options = await sendMessage({ type: 'getOptions' });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : 'Failed to load options';
+    showError(container, message);
+    return;
+  }
 
   const form = el('div', { class: 'options-form' });
 

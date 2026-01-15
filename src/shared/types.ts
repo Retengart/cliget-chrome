@@ -27,7 +27,7 @@ export interface Options {
 export const DEFAULT_OPTIONS: Options = {
   doubleQuotes: false,
   excludeHeaders: 'Accept-Encoding Connection',
-  aria2Options: '',
+  aria2Options: '-j16 -x16',
 };
 
 // Result type for error handling
